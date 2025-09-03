@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resilience</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body id="body" class="bg-white text-gray-900 transition-colors duration-500 min-h-screen p-6">
+
+  <!-- 상단 헤더 -->
+  <header class="flex justify-between items-center mb-10 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold glass-ui px-4 py-2 rounded-2xl">Resilience</h1>
+    <div class="flex space-x-2">
+      <button id="lightMode" class="p-2 rounded-full bg-yellow-200 hover:bg-yellow-300 transition">☀️</button>
+      <button id="darkMode" class="p-2 rounded-full bg-gray-400 hover:bg-gray-600 transition">🌙</button>
+    </div>
+  </header>
+
+  <!-- 말풍선 카드 -->
+  <main class="max-w-3xl mx-auto">
+    <div class="relative bg-pink-50 dark:bg-gray-800 p-6 rounded-3xl shadow-lg mb-6">
+      <!-- 말풍선 꼬리 -->
+      <div class="absolute -top-4 left-8 w-6 h-6 bg-pink-50 dark:bg-gray-800 rounded-full rotate-45 shadow-sm"></div>
+
+      <!-- 콘텐츠 -->
+      <p class="text-lg whitespace-pre-line">
+Stress prevention and reduction, as well as emergency coping strategies, can help minimize personal daily deterioration.
+
+🔹 Cognitive Strategies
+1️⃣ Cognitive Approach
+1. Emotion Labeling
+    * “Right now I feel anger and anxiety.”
+    * Effect: Activates prefrontal cortex → inhibits amygdala
+2. Self-distancing
+    * “This stimulus and my response are separate.”
+    * Effect: Suppresses automatic aggressive or overreactive behaviors
+...
+      </p>
+    </div>
+
+    <a href="/" class="text-blue-500 hover:underline">← Back to Main</a>
+  </main>
+
+  <!-- 다크/라이트 모드 스크립트 -->
+  <script>
+    const body = document.getElementById('body');
+    const darkBtn = document.getElementById('darkMode');
+    const lightBtn = document.getElementById('lightMode');
+
+    // 이전 테마 불러오기
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+      body.classList.remove('bg-white', 'text-gray-900');
+      body.classList.add('bg-gray-900', 'text-gray-100');
+    }
+
+    darkBtn.addEventListener('click', () => {
+      body.classList.add('dark');
+      body.classList.remove('bg-white', 'text-gray-900');
+      body.classList.add('bg-gray-900', 'text-gray-100');
+      localStorage.setItem('theme', 'dark');
+    });
+
+    lightBtn.addEventListener('click', () => {
+      body.classList.remove('dark');
+      body.classList.remove('bg-gray-900', 'text-gray-100');
+      body.classList.add('bg-white', 'text-gray-900');
+      localStorage.setItem('theme', 'light');
+    });
+  </script>
+
+</body>
+</html>

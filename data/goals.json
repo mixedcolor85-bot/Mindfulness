@@ -1,0 +1,18 @@
+{
+  "user1": {
+    "goals": {
+      "goal1": {
+        "title": "Meditation 10분",
+        "completedDates": []
+      },
+      "goal2": {
+        "title": "뇌훈련 기억력 게임",
+        "completedDates": []
+      }
+    },
+    "brainTraining": {
+      "memoryScore": 0,
+      "focusScore": 0
+    }
+  }
+}

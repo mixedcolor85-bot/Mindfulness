@@ -1,0 +1,22 @@
+.glass-title {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  color: #111;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark .glass-title {
+  background: rgba(0, 0, 0, 0.35);
+  color: #e0e0e0;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}

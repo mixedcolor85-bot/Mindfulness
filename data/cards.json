@@ -1,0 +1,10 @@
+[
+  { "id": "mindset", "title": "Mindset", "description": "Track and develop your mindset with daily exercises.", "file": "content/mindset.md" },
+  { "id": "mindfulness", "title": "Mindfulness", "description": "Practice mindfulness and increase focus and awareness.", "file": "content/mindfulness.md" },
+  { "id": "meditation", "title": "Meditation", "description": "Meditation exercises to calm your mind and relieve stress.", "file": "content/meditation.md" },
+  { "id": "resilience", "title": "Resilience", "description": "Strengthen your resilience and stress management skills.", "file": "content/resilience.md" },
+  { "id": "stress", "title": "Stress Relief", "description": "Techniques to reduce stress and improve well-being.", "file": "content/stress.md" },
+  { "id": "physical", "title": "Physical", "description": "Physical exercises to support brain and body health.", "file": "content/physical.md" },
+  { "id": "brainStructure", "title": "Brain Structure", "description": "Learn and understand nervous system and brain anatomy.", "file": "content/brainStructure.md" },
+  { "id": "brainExercise", "title": "Brain Exercise/Dev", "description": "Exercises to improve brain function and development.", "file": "content/brainExercise.md" }
+]
