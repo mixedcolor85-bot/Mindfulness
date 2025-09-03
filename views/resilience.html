@@ -1,3 +1,4 @@
+  <!-- 말풍선 카드 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,55 @@
   <title>Resilience</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../public/css/style.css">
+  <style>
+    /* 글래스 UI 적용 */
+    .glass-ui {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      color: #111;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark .glass-ui {
+      background: rgba(0, 0, 0, 0.35);
+      color: #f0f0f0;
+    }
+
+    /* 말풍선 카드 */
+    .bubble-card {
+      position: relative;
+      background: #fce7f3; /* 라이트 모드 분홍 */
+      border-radius: 2rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: background 0.3s, color 0.3s;
+    }
+    .bubble-card::after {
+      content: '';
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: #fce7f3;
+      transform: rotate(45deg);
+      top: -0.75rem;
+      left: 2rem;
+      box-shadow: -2px 2px 2px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+    body.dark .bubble-card {
+      background: #1f2937; /* 다크 모드 검정계열 */
+      color: #f0f0f0;
+    }
+    body.dark .bubble-card::after {
+      background: #1f2937;
+    }
+
+    /* MD 콘텐츠 */
+    .bubble-card p {
+      white-space: pre-line;
+    }
+  </style>
 </head>
 <body id="body" class="bg-white text-gray-900 transition-colors duration-500 min-h-screen p-6">
 
@@ -20,12 +70,8 @@
 
   <!-- 말풍선 카드 -->
   <main class="max-w-3xl mx-auto">
-    <div class="relative bg-pink-50 dark:bg-gray-800 p-6 rounded-3xl shadow-lg mb-6">
-      <!-- 말풍선 꼬리 -->
-      <div class="absolute -top-4 left-8 w-6 h-6 bg-pink-50 dark:bg-gray-800 rounded-full rotate-45 shadow-sm"></div>
-
-      <!-- 콘텐츠 -->
-      <p class="text-lg whitespace-pre-line">
+    <div class="bubble-card mb-6">
+      <p>
 Stress prevention and reduction, as well as emergency coping strategies, can help minimize personal daily deterioration.
 
 🔹 Cognitive Strategies
@@ -36,7 +82,30 @@ Stress prevention and reduction, as well as emergency coping strategies, can hel
 2. Self-distancing
     * “This stimulus and my response are separate.”
     * Effect: Suppresses automatic aggressive or overreactive behaviors
-...
+3. Cognitive Reappraisal
+    * “I cannot change the environment, but I can control my response.”
+    * Effect: Reduces helplessness and frustration
+4. Grounding / Attention Shift
+    * Focus on visual, auditory, tactile cues → be present
+    * Effect: Suppresses overthinking & repetitive stress
+
+2️⃣ Behavioral Strategies
+1. Immediate routine actions
+    * Drink water, close eyes, stretch
+    * Effect: Restores sense of control, stabilizes nervous system
+2. Small physical movements
+    * Change posture, shake hands/feet, light exercise
+    * Effect: Relieves muscle tension, calms sympathetic nervous system
+3. Sensory stimulation
+    * Cold water face/hand/foot, massage → quick calm
+4. Maintain daily routine
+    * Consistent sleep, meals, exercise
+    * Effect: Keeps stability amid repetitive stress triggers
+5. Emotional expression
+    * Writing, speaking, shouting → releases suppressed anger/anxiety
+
+💡 Summary:
+“Environment cannot be controlled, but cognitive distancing + emotion labeling + behavioral routines can prevent stress explosions and minimize daily deterioration.”
       </p>
     </div>
 
@@ -49,7 +118,9 @@ Stress prevention and reduction, as well as emergency coping strategies, can hel
     const darkBtn = document.getElementById('darkMode');
     const lightBtn = document.getElementById('lightMode');
 
-    // 이전 테마 불러오기
+    const bubbleCard = document.querySelector('.bubble-card');
+
+    // 페이지 로드 시 테마 설정
     if (localStorage.getItem('theme') === 'dark') {
       body.classList.add('dark');
       body.classList.remove('bg-white', 'text-gray-900');

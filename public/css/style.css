@@ -1,22 +1,15 @@
-.glass-title {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  color: #111;
-  text-align: center;
-  transition: background 0.3s, color 0.3s;
+/* MD 콘텐츠 박스 스타일 */
+#mdContent {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #1a1a1a; /* 어두운 회색/검정 계열 */
+  color: #f0f0f0; /* 밝은 글씨 */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-body.dark .glass-title {
-  background: rgba(0, 0, 0, 0.35);
-  color: #e0e0e0;
-}
-
-.card {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+/* 라이트 모드일 때 MD 콘텐츠 박스 색상 */
+body:not(.dark) #mdContent {
+  background-color: #f0f0f0; /* 연한 회색 */
+  color: #111; /* 글씨 검정 */
 }

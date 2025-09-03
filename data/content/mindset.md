@@ -1,0 +1,14 @@
+- [x] Positive  ,motivation
+- [x] Statement—“All keys in myself.”  
+- [x] 毎日boost energy(hormone ,blood cycle)
+- [x] growth mindset
+- [x] brain plasticly
+- [x] mindfulness
+- [x] be positive 
+- [x] gut health
+- [x] well better  improve  intend  
+- [x] - [x] balance  amygdala  
+- [x] - [x] - [x] - [x] - [x] - [x] - [x] brain health 達成
+- [x] 解毒、解消、緩和、停止, 緩衝
+- [x] 補充,補完,余裕
+- [x] Optimism is positive
